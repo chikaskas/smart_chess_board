@@ -1,3 +1,6 @@
+
+# Made partially by Google's Gemini AI
+
 import machine as m
 import sys
 import select

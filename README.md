@@ -3,15 +3,15 @@
 
 ## Product Functionality:
 
-- A 33*33*4 cm cardstock chess board with extra features
+- A 33x33x4 cm cardstock chess board with extra features
 - An RGB led under each square.
-- When you pick up a piece, it shows you where you can place it by lightng up those squares green.
+- When you pick up a piece, it shows you where you can place it by lighting up those squares green.
 - Power by USB cable with type-C connector for the board. Any wall socket adapter or modern computer device (laptop, phone, etc) should work.
 - Intricacies like how pins, checks and pawn promotions will be handled are not mentioned here but they will be handled.
 - Modes: 2 player; and online mode.
 - 2 player mode is basic over the board gameplay enhanced by LED move guiding.
 - 'Online' mode allows you to connect the smart board to the Chessconnect extension on a device (laptop, phone, etc) using the same USB cable. (one end plugged into device and other into smart board)
-- Chessconnect fasilitates comminication between smart chess board and popular chess platforms, allowing the smart board to work with Chess.com, Lichess and other websites.
+- Chessconnect facilitates comminication between smart chess board and popular chess platforms, allowing the smart board to work with Chess.com, Lichess and other websites.
 - In online mode, you can play against a bot or an online player on the chess platform.
 - Online mode will show the possible moves for the lifted piece as usual, but it will also send your move to the chess platform so it moves on the on-screen board as well.
 - When the oponent moves, there move is shown on the smart board by lighting those suares up. For example, if oponent moved peice from A1 to A4 then A1 and A4 will both light up blue on the smart board.
@@ -30,6 +30,13 @@
 - WS2812B signalled by 3.3V logic is unreliable so "sacrificial pixel trick".
 - Sacrificial pixel trick uses diode in series to lower voltage to first LED to drop 0.7V. Shown in circuit diagram below.
 
+## Bridge to Chessconnect (references)
+
+- A Millenium chessboard is spoofed to allow chess board to communicate with Chessconnect.
+- This spoofing/using protocol is legal as of my knowledge gained from quick Google AI searches.
+- The communication protocol was described in a [Github repository](github.com/domschl/python-mchess) by 'domschl' in [magic-board.md](https://github.com/domschl/python-mchess/blob/master/mchess/magic-board.md)
+- The [coms.py](./chessconnect_(basic_firmware_tested)/coms.py) code in this repository is also copied from domschl's repository.
+- The [main.py](./chessconnect_(basic_firmware_tested)/main.py) file is made partially by Google's Gemini AI using domschl's magic-board.md
 
 ## A [video](https://youtu.be/qUJj72wvn6k) that explains details ommited in this README though the prototype I have built.
 
@@ -61,4 +68,4 @@
 
 ## Why I made this project + reflection
 
-My freind tried to make a smart chess board for his IGCSE DT coursework but it turned out much harder than expected so he ended up changing his product to make it feasable. Back when he was making it, I said I can write the code for him because I was interested. Slowly I started helping him with hardware issues and choices because I was very interested. After he changed his idea, all the research I had done and everything I had learned stayed with me. Then the next year I did my own DT coursework and learned alot about hardware as I built sunrise alarm clock. Then I did the Solder YSWS with Hackclub and learned alot more about electronics and the overall design process. After that I was really busy with school work and finally during the summer holiday was the perfect time. I had alot of time, alot of experience and knowledge (not nearly enough to build this though yet), and excitment to finaly make this product. On the design process I learned alot as expected and I think this is the most creative project I have built. I am proud of how creative and effective my idea to use conductive thread for matrix scanning was because it drastically simplified the classic reed switch or hall effect sensor method. I also don't like the idea of using expensive components and complex solutions to make a "quality" product so I made it a challenge to not just "make" the chess board, but also design in such a way that a biginner can easily build using minimal technical equipment. On the surface, the product may seem simple but that is because alot of showerthoughts, dayfreaming and conversing with Google AI allowed it to be. Overall I find it very cool that I have designed a smart chess board built with card and metal string that will still work well and not look like just a scrappy prototype.
+My freind tried to make a smart chess board for his IGCSE DT coursework but it turned out much harder than expected so he ended up changing his product to make it feasible. Back when he was making it, I said I can write the code for him because I was interested. Slowly I started helping him with hardware issues and choices because I was very interested. After he changed his idea, all the research I had done and everything I had learned stayed with me. Then the next year I did my own DT coursework and learned a lot about hardware as I built sunrise alarm clock. Then I did the Solder YSWS with Hackclub and learned a lot more about electronics and the overall design process. After that I was really busy with school work and finally during the summer holiday was the perfect time. I had a lot of time, a lot of experience and knowledge (not nearly enough to build this though yet), and excitment to finaly make this product. On the design process I learned a lot as expected and I think this is the most creative project I have built. I am proud of how creative and effective my idea to use conductive thread for matrix scanning was because it drastically simplified the classic reed switch or hall effect sensor method. I also don't like the idea of using expensive components and complex solutions to make a "quality" product so I made it a challenge to not just "make" the chess board, but also design in such a way that a biginner can easily build using minimal technical equipment. On the surface, the product may seem simple but that is because a lot of showerthoughts, dayfreaming and conversing with Google AI allowed it to be. Overall I find it very cool that I have designed a smart chess board built with card and metal string that will still work well and not look like just a scrappy prototype.

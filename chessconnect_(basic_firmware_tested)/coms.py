@@ -1,4 +1,6 @@
 
+# copied from https://github.com/domschl/python-mchess/blob/main/mchess/chess_link_protocol.py
+
 """
 Helper functions for the Chess Link protocol for character-based odd-parity and
 message-block-parity.
